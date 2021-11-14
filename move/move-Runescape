@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# Desktop option
+gnome(){
+  export X=78
+  export Y=109
+}
+lxqt(){
+  export X=
+  export Y=
+}
+
+gnome_right_half_screen(){
+  export X=1004
+  export Y=109
+}
+
+find(){
+  pids=($(xdotool search --classname "RuneScape"))
+  export Runescape=${pids[-1]}
+}
+
+find
+xdotool windowmove $Runescape $X $Y
+xdotool windowsize $Runescape $sizeX $sizeY

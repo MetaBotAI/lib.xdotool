@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+alt(){
+  xdotool search --all --name "RuneScape"
+}
+
+pids=($(xdotool search --classname "RuneScape"))
+
+all(){
+for i in "${pids[@]}"; do echo $i; done
+}
+
+get(){
+  Runescape=${pids[-1]}
+}
