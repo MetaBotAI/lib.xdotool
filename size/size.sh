@@ -29,10 +29,10 @@ full_screen(){
   export sizeY=
 }
 
-find(){
+find_Runescape(){
   pids=($(xdotool search --classname "RuneScape"))
   export Runescape=${pids[-1]}
 }
 
-find
+find_Runescape
 xdotool windowsize $Runescape 800 600

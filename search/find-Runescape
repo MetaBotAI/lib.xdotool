@@ -1,14 +1,19 @@
 #!/usr/bin/bash
-alt(){
+option(){
   xdotool search --all --name "RuneScape"
+  xdotool search --classname "RuneScape"
 }
 
-pids=($(xdotool search --classname "RuneScape"))
+find_Runescape(){
+  pids=($(xdotool search --classname "RuneScape"))
+  export Runescape=${pids[-1]}
+}
 
 all(){
-for i in "${pids[@]}"; do echo $i; done
+  for i in "${pids[@]}"; do echo $i; done
 }
 
 get(){
-  Runescape=${pids[-1]}
+  find_Runescape
+  echo $Runescape
 }

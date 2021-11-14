@@ -15,11 +15,11 @@ gnome_right_half_screen(){
   export Y=109
 }
 
-find(){
+find_Runescape(){
   pids=($(xdotool search --classname "RuneScape"))
   export Runescape=${pids[-1]}
 }
 
-find
+find_Runescape
 xdotool windowmove $Runescape $X $Y
 xdotool windowsize $Runescape $sizeX $sizeY
