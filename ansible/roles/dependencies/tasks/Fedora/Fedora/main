@@ -1,0 +1,7 @@
+---
+
+- name: Install xdotool
+  dnf:
+    name:
+      - xdotool
+  state: latest
