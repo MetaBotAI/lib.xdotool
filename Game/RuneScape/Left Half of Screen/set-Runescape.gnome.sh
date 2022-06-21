@@ -1,13 +1,20 @@
-#!/usr/bin/bash
-
 # Desktop option
 
-Runescape.gnome_right_half_screen(){
+gnome(){
   export X=1004
   export Y=109
   export sizeX=926
   export sizeY=1016
+}
 
+kde(){
+  export X=1159
+  export Y=294
+  export sizeX=926
+  export sizeY=1016
+}
+
+left_half_screen(){
   xdotool windowmove $Runescape $X $Y
   xdotool windowsize $Runescape $sizeX $sizeY
 }
@@ -18,4 +25,4 @@ find_Runescape(){
 }
 
 find_Runescape
-Runescape.gnome_right_half_screen
+left_half_screen

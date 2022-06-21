@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # Desktop option
 Simba.gnome_left_half_screen(){
   export X=78
