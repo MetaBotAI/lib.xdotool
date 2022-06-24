@@ -1,20 +1,27 @@
-# Desktop option
+# Works!
 
+size(){
+  export sizeX=1024
+  export sizeY=768
+}
+
+# Desktop option
 gnome(){
   export X=1004
   export Y=109
-  export sizeX=926
-  export sizeY=1016
 }
 
 kde(){
   export X=1159
   export Y=294
-  export sizeX=926
-  export sizeY=1016
 }
 
-left_half_screen(){
+lxde(){
+  export X=0
+  export Y=0
+}
+
+set_runescape(){
   xdotool windowmove $Runescape $X $Y
   xdotool windowsize $Runescape $sizeX $sizeY
 }
@@ -25,4 +32,7 @@ find_Runescape(){
 }
 
 find_Runescape
-left_half_screen
+
+size
+lxde
+set_runescape
